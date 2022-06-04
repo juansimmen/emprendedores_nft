@@ -37,9 +37,15 @@ const WalletContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: right;
+  justify-content: space-between;
 `;
+const Logo = styled.div`
+  flex: 0 0 auto;
 
+  img {
+    height: 80px;
+  }
+`;
 const WalletAmount = styled.div`
   color: black;
   width: auto;
@@ -641,6 +647,8 @@ const Home = (props: HomeProps) => {
         <main>
             <MainContainer>
                 <WalletContainer>
+                    <Logo><img alt="" src="logo.png"/></Logo>
+
                     <Wallet>
                         {wallet ?
                             <WalletAmount>{(balance || 0).toLocaleString()} SOL<ConnectButton/></WalletAmount> :
@@ -651,7 +659,7 @@ const Home = (props: HomeProps) => {
                 <MintContainer>
                     <DesContainer>
                         <NFT elevation={3}>
-                            <h2>My NFT</h2>
+                            <h2>Emprendedores NFT</h2>
                             <br/>
                             <div><Price
                                 label={isActive && whitelistEnabled && (whitelistTokenBalance > 0) ? (whitelistPrice + " " + priceLabel) : (price + " " + priceLabel)}/><Image
