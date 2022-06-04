@@ -84,7 +84,7 @@ const NFT = styled(Paper)`
   margin: 0 auto;
   padding: 5px 20px 20px 20px;
   flex: 1 1 auto;
-  background-color: var(--card-background-color) !important;
+  background-color: transparent !important;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
 `;
 
@@ -142,6 +142,7 @@ const SolExplorerLink = styled.a`
 `;
 
 const MainContainer = styled.div`
+  background-color: transparent !important;
   display: flex;
   flex-direction: column;
   margin-top: 20px;
